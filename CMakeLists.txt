@@ -74,7 +74,7 @@ set(EXAMPLES
   11-oit
   11-overdrawcount
   12-imageprocessing
-  12-particlesimulator
+#  12-particlesimulator # Couldn't be bothered to get this one to work.
   12-raytracer
   12-simplecompute
 )
@@ -105,3 +105,12 @@ add_subdirectory(lib/glfw)
 
 ADD_CUSTOM_TARGET(debug ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE:STRING=Debug ${PROJECT_SOURCE_DIR})
 ADD_CUSTOM_TARGET(release ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE:STRING=Release ${PROJECT_SOURCE_DIR})
+
+# For debugging of variables:
+set(DEBUG_VARIABLES OFF)
+if(DEBUG_VARIABLES)
+  get_cmake_property(_variableNames VARIABLES)
+  foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+  endforeach()
+endif(DEBUG_VARIABLES)
