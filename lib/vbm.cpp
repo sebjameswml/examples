@@ -4,6 +4,7 @@
 #include "vgl.h"
 
 #include <stdio.h>
+#include <string.h> // memset
 
 VBObject::VBObject(void)
     : m_vao(0),

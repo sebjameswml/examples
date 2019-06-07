@@ -14,6 +14,7 @@
 #include "LoadShaders.h"
 
 #include <stdio.h>
+#include <string.h>
 #include <string>
 
 #define MAX_FRAMEBUFFER_WIDTH 2048
@@ -62,7 +63,7 @@ BEGIN_APP_DECLARATION(OITDemo)
         GLint projection_matrix;
     } render_scene_uniforms;
 
-    // Program to resolve 
+    // Program to resolve
     GLuint resolve_program;
 
     // Full Screen Quad

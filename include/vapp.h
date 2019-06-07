@@ -3,6 +3,10 @@
 
 #include "vgl.h"
 
+// ifdef __UNIX__?
+#include <sys/time.h>
+#include <string.h> // string.h in client apps
+
 class VermilionApplication
 {
 protected:
